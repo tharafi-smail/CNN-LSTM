@@ -2,7 +2,7 @@
 
 # Models
 - Convolutional Neural Network (CNN): Uses convolutional and pooling layers to extract spatial features from images.
-- Long Short-Term Memory (LSTM) : A type of Recurrent Neural Network (RNN) capable of learning long-term dependencies using memory cells. For MNIST, each image (28×28) is treated as a sequence of 28 rows, each row is an input timestep.
+- Long Short-Term Memory (LSTM) : A type of Recurrent Neural Network (RNN) capable of learning long-term dependencies using memory cells. For MNIST, each image (28×28) is treated as a sequence of 28 rows, each row is an input timestep of 28 features.
 
 ---
 # Project Steps
@@ -13,7 +13,7 @@
   - LSTM Architecture:
     `LSTM layer → Dropout → Dense → Dropout → Dense`
 - Training : Models trained for 10, 20, and 30 epochs.  
-- Evaluation : Training and Validation Accuracy/ Loss, Training Time (seconds)
+- Evaluation : Training and Validation Accuracy/ Loss, Training Time (seconds).
 - Visualization : Plotted accuracy/loss vs epochs for comparison.
 
 # Results:
@@ -62,16 +62,26 @@
 |:-----------|:--------|:---------|
 | Accuracy |  Higher  | Slightly lower |
 | Loss |  Lower | Higher |
-| Training Speed |  Faster | Slower |
-| Overfitting | Minimal | Slightly in validation |
+| Training Speed |  Faster | Slower due to sequential processing |
+| Overfitting | Minimal | Higher |
+| Computation | Minimal | Slightly in validation |
 
-- Conclusion: For image-based tasks like MNIST, CNNs are more efficient and accurate. LSTMs, while powerful for sequential data, are not as optimized for spatial image patterns.
+- CNN performs better because:
+  - Filters extract localized visual patterns efficiently.
+  - Faster training and lower validation loss.
+- LSTM performs adequately but:
+  - Sequential interpretation limits spatial understanding.
+  - More complex and slower convergence.
+### Conclusion: For image-based tasks like MNIST, CNNs are more efficient and accurate. LSTMs, while powerful for sequential data (e.g., time series), are not as optimized for spatial image patterns.
+
 
 ---
 # Improvement and Extension:
-- Hybrid Model: Combine CNN + LSTM for sequence-aware feature extraction (e.g., video frame recognition).
+- For LSTM: Implement Bidirectional LSTM, Add attention mechanisms, Use CNN-LSTM hybrid architecture.
 - Data Augmentation: (e.g., Use rotation) to improve generalization.
-- Regularization: Dropout, Batch Normalization to stabilize training.
+- Regularization: (e.g., Early Stopping) to prevent overfitting.
+- Test on Fashion-MNIST or CIFAR-10 for robustness.
+
 
 
 
