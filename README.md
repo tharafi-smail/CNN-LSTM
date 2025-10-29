@@ -12,7 +12,7 @@
     `Conv2D → MaxPooling →Conv2D → MaxPooling → Flatten → Dense → Dropout → Dense`
   - LSTM Architecture:
     `LSTM layer → Dropout → Dense → Dropout → Dense`
-- Training : Models trained for 10, 20, and 30 epochs.  
+- Training : Models trained for 10, 20, 30 epochs. and Batch Size: 64.
 - Evaluation : Training and Validation Accuracy/ Loss, Training Time (seconds).
 - Visualization : Plotted accuracy/loss vs epochs for comparison.
 
@@ -72,7 +72,7 @@
 - LSTM performs adequately but:
   - Sequential interpretation limits spatial understanding.
   - More complex and slower convergence.
-### Conclusion: For image-based tasks like MNIST, CNNs are more efficient and accurate. LSTMs, while powerful for sequential data (e.g., time series), are not as optimized for spatial image patterns.
+Conclusion: For image-based tasks like MNIST, CNNs are more efficient and accurate. LSTMs, while powerful for sequential data (e.g., time series), are not as optimized for spatial image patterns.
 
 
 ---
@@ -81,6 +81,8 @@
 - Data Augmentation: (e.g., Use rotation) to improve generalization.
 - Regularization: (e.g., Early Stopping) to prevent overfitting.
 - Test on Fashion-MNIST or CIFAR-10 for robustness.
+
+
 
 
 
