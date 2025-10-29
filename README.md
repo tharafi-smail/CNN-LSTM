@@ -63,8 +63,8 @@
 | Accuracy |  Higher  | Slightly lower |
 | Loss |  Lower | Higher |
 | Training Speed |  Faster | Slower due to sequential processing |
-| Overfitting | Minimal | Higher |
-| Computation | Minimal | Slightly in validation |
+| Overfitting | Minimal | Slightly in validation |
+| Computation | Efficient  | Higher |
 
 - CNN performs better because:
   - Filters extract localized visual patterns efficiently.
