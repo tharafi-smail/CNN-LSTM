@@ -72,7 +72,8 @@
 - LSTM performs adequately but:
   - Sequential interpretation limits spatial understanding.
   - More complex and slower convergence.
-Conclusion: For image-based tasks like MNIST, CNNs are more efficient and accurate. LSTMs, while powerful for sequential data (e.g., time series), are not as optimized for spatial image patterns.
+
+- Conclusion: For image-based tasks like MNIST, CNNs are more efficient and accurate. LSTMs, while powerful for sequential data (e.g., time series), are not as optimized for spatial image patterns.
 
 
 ---
