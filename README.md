@@ -40,7 +40,7 @@
 | CNN | 316.656794 |
 | LSTM | 602.868776 |
 
-![Description](plot.jpg)
+![Description](plot.png)
 
 ---
 # Analysis of Differences
